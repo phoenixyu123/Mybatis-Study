@@ -2,9 +2,6 @@ package com.yangyg.dao;
 
 import com.yangyg.pojo.User;
 
-import java.util.List;
-import java.util.Map;
-
 /**
  * @author Yang YiGang
  * @version 1.0
