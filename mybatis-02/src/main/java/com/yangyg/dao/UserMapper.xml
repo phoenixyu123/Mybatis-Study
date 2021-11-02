@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.yangyg.dao.UserMapper">
+    <select id="getUserList" resultType="User">
+        select *
+        from user
+    </select>
+    <select id="getUserById" parameterType="integer" resultType="User">
+        select *
+        from user
+        where id = #{id}
+    </select>
+    <select id="getUserById2" resultType="User">
+        select *
+        from user
+        where id = #{userid}
+    </select>
+    <select id="getUserLike" resultType="User">
+        select *
+        from user
+        <where> name like "%"#{name}"%" </where>
+    </select>
+    <!--  对象中的属性可以直接取出来，如User.id====id  -->
+    <insert id="addUser" parameterType="User">
+        insert into user (id, name, pwd)
+        values (#{id}, #{name}, #{pwd})
+    </insert>
+    <!--  使用Map传进来的话参数用map的key  -->
+    <insert id="addUser2" parameterType="map">
+        insert into user(id, name, pwd)
+        values (#{userid}, #{username}, #{userpwd})
+    </insert>
+    <update id="updateUser" parameterType="User">
+        update user
+        set name = #{name},
+            pwd  = #{pwd}
+        where id = #{id}
+    </update>
+    <delete id="deleteUser" parameterType="integer">
+        delete
+        from user
+        where id = #{id}
+    </delete>
+</mapper>
