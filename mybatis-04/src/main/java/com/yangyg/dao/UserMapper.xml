@@ -14,4 +14,13 @@
         from user
         where id = #{id}
     </select>
+
+    <select id="getUserByLimit" parameterType="map" resultType="user">
+        select *
+        from user
+        limit #{startIndex},#{pageSize}
+    </select>
+    <select id="getUserByRowBounds" resultType="user">
+        select * from user
+    </select>
 </mapper>

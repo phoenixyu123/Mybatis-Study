@@ -1,4 +1,4 @@
-package com.yangyg.dao;
+package dao;
 
 import com.yangyg.pojo.User;
 import com.yangyg.utils.MybatisUtils;

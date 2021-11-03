@@ -1,4 +1,4 @@
-package com.yangyg.dao;
+package yangyg.dao;
 
 import com.yangyg.pojo.User;
 
