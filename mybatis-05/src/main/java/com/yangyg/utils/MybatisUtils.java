@@ -30,6 +30,6 @@ public class MybatisUtils {
     //getSqlSession实例
     public static SqlSession getSqlSession(){
         //返回一个能执行Sql的对象
-        return sqlSessionFactory.openSession();
+        return sqlSessionFactory.openSession(true);
     }
 }

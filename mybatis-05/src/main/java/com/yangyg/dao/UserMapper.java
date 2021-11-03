@@ -1,6 +1,7 @@
 package com.yangyg.dao;
 
 import com.yangyg.pojo.User;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 import java.util.Map;
@@ -12,26 +13,19 @@ import java.util.Map;
  */
 public interface UserMapper {
 
-    /**
-     * 根据id获取User用户信息
-     * @param id 用户id
-     * @return 返回User对象
-     */
-    User getUserById(Integer id);
 
+    @Select("select * from user")
+    List<User> getUsers();
 
-    /**
-     * 通过sql中的limit实现分页 使用Map作为参数进行分页查询
-     * @param map startIndex起始下标，pageSize页大小
-     * @return 返回User List
-     */
-    List<User> getUserByLimit(Map<String,Integer> map);
+    @Select("select * from user where id = #{id}")
+    User getUserById(@Param("id") int id);
 
+    @Insert("insert into user(id,name,pwd) values(#{id},#{name},#{password})")
+    Integer addUser(User user);
 
-    /**
-     * 通过RowBounds实现分页
-     * @return 返回User
-     */
-    List<User> getUserByRowBounds();
+    @Update("update user set name = #{name},pwd = #{password} where id=#{id}")
+    Integer updateUser(User user);
 
+    @Delete("delete from user where id = #{id}")
+    Integer deleteUserById(@Param("id") Integer id);
 }

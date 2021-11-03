@@ -7,9 +7,9 @@
     <properties resource="db.properties"/>
     
     <!--设置-->
-<!--    <settings>-->
-<!--        <setting name="logImpl" value="LOG4J"/>-->
-<!--    </settings>-->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
 
     <!--可以给实体类起别名-->
     <typeAliases>
@@ -41,4 +41,9 @@
 <!--    <mappers>-->
 <!--        <mapper resource="com/yangyg/dao/UserMapper.xml"/>-->
 <!--    </mappers>-->
+
+    <!--  绑定接口  -->
+    <mappers>
+        <mapper class="com.yangyg.dao.UserMapper"/>
+    </mappers>
 </configuration>
