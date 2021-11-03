@@ -1,4 +1,4 @@
-package yangyg.pojo;
+package com.yangyg.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

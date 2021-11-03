@@ -1,5 +1,6 @@
-package dao;
+package java.com.yangyg.dao;
 
+import com.yangyg.dao.UserMapper;
 import com.yangyg.pojo.User;
 import com.yangyg.utils.MybatisUtils;
 import org.apache.ibatis.session.RowBounds;

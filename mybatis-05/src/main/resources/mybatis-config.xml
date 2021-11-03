@@ -7,9 +7,9 @@
     <properties resource="db.properties"/>
     
     <!--设置-->
-    <settings>
-        <setting name="logImpl" value="LOG4J"/>
-    </settings>
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="LOG4J"/>-->
+<!--    </settings>-->
 
     <!--可以给实体类起别名-->
     <typeAliases>
@@ -38,7 +38,7 @@
             </dataSource>
         </environment>
     </environments>
-    <mappers>
-        <mapper resource="com/yangyg/dao/UserMapper.xml"/>
-    </mappers>
+<!--    <mappers>-->
+<!--        <mapper resource="com/yangyg/dao/UserMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>

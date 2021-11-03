@@ -1,4 +1,4 @@
-package yangyg.utils;
+package com.yangyg.utils;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
